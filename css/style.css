@@ -1,0 +1,516 @@
+header {
+    margin: 0;
+    padding: 0;
+    background-color: #3E8818;
+}
+.title-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+.title-rectangle {
+    width: 50vw;
+    height: 5.55vw;
+}
+.title-rectangle1 {
+    background: linear-gradient(to right, #5AB017, #3E8818);
+}
+.title-rectangle2 {
+    background-color: #216119;
+}
+.title-rectangle1 h1 {
+    font-size: 1.9vw;
+    margin: 0 0 0 0;         /* Remove margem superior e define margem inferior */
+    text-align: left;          /* Alinha o texto à esquerda */
+    color: #FFFFFF;
+    padding: 0 0.5vw 0 0.5vw;
+}
+.title-rectangle1 h2 {
+    font-size: 1.35vw;
+    margin: 0 0 0 0;         /* Remove margem superior e define margem inferior */
+    text-align: left;          /* Alinha o texto à esquerda */
+    color: #FFFFFF;
+    padding: 0 0.5vw 0 0.5vw;
+}
+.title-triangle {
+    width: 0;
+    height: 0;
+    border-right: 5vw solid #216119;
+    border-bottom: 2.77vw solid transparent;
+    border-top: 2.77vw solid transparent;
+    background-color: #3E8818;
+
+}
+.logo-container {
+    display: flex;
+    justify-content: end;
+    margin: 0.5vw;
+}
+body {
+    width: 100vw;
+    font-family: "Inria Sans";
+    background-color: #acf35b;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+.btn {
+    width: 12.5%;
+    height: 3vw;
+    font-size: 1.3vw;
+    font-family: "Inria Sans";
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background-color: #2574be;
+    padding: 0.5vw 1vw;
+    margin: 1vw 0.5vw;
+    border-radius: 5vw;
+}
+.btn:hover {
+    background-color: #2da0e2;
+    cursor: pointer;
+}
+.button-container {
+    display: flex;
+    position: relative;
+    top: 0vw;
+    width: 100vw;
+    height: 5.3vw;
+    gap: 0.25vw;
+    background-color: rgba(163, 215, 122, 1);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: top 0.2s ease-in-out;
+}
+.button-container .btn {
+    background-color: transparent;
+}
+.button-container .btn:hover {
+    background-color: #D4EF31;
+    cursor: pointer;
+}
+.image-container {
+    position: relative;
+    width: 100vw;
+    top: 0vw;
+    text-align: center;
+}
+.image-container img {
+    width: 100vw;
+    height: auto;
+    margin-top: 0.25vw;
+}
+
+.image-container .title-rectangle {
+    margin-top: 1vw;
+    position: absolute;
+    top: 0.5vw;
+    left: 44.5vw;
+    width: 10vw;
+    height: 5vw;
+    background-color: #c6c924;
+    border-radius: 2vw;
+}
+
+.image-container h1 {
+    position: relative;
+    top: -0.5vw;
+    font-size: 2vw;
+    text-decoration: underline;
+    color: #292626;
+}
+
+.text-container {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    width: 92vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.texts {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 50%);
+    gap: 3vw;
+    justify-items: start;
+}
+
+.text {
+    width: auto;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5vw;
+    margin: 1vw;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+.text img {
+    border-radius: 2vw;
+    border: 0.20vw solid #007BFF;
+}
+.image-container .text-container .text h2 {
+    font-size: 1.8vw;
+    color: #333;
+    border-bottom: 0.25vw solid #007BFF;
+    padding-bottom: 0.25vw;
+    margin-top: 0.25vw;
+}
+p {
+    font-size: 1vw;
+    margin: 0.5vw 0;
+    text-align: justify;
+}
+ul {
+    padding-left: 2vw;
+    margin: 0.5vw 0 1vw 1vw;
+}
+ul li {
+    font-size: 1vw;
+    text-align: left;
+    margin: 0.25vw 0;
+}
+
+/* Estilo do container de cards */
+.card-container {
+    position: absolute;
+    top: 3vw;
+    width: 100vw;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+}
+
+/* Estilo de um card individual */
+.card {
+    background-color: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
+    width: 17vw;
+    height: 30vw;
+    padding: 1.5vw;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 17vw;
+    height: 13vw;
+    border-radius: 0.5vw 0.5vw 0 0;
+}
+
+.card h3 {
+    position: relative;
+    top: 0vw;
+    margin: 0 0 0.5vw;
+    font-size: 1.3vw;
+    color: #333;
+}
+
+.card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9vw;
+    line-height: 1.5;
+}
+
+.card a {
+    position: absolute;
+    display: inline-block;
+    top: 29vw;
+    left: 6.7vw;
+    font-size: 1vw;
+    width: 5vw;
+    height: 1.5vw;
+    margin-top: 0.75vw;
+    padding: 0.5vw 1vw;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2574be;
+    border-radius: 0.25vw;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #2da0e2;
+}
+
+.comment-section {
+    position: absolute;
+    top: 0vw;
+    margin-top: 1vw;
+    width: 100vw;
+}
+
+.comment-section .form-area {
+    position: relative;
+    background-color: #20b684;
+    width: 50vw;
+    left: 25vw;
+    border-radius: 2vw;
+    border: 0.25vw solid #333;
+}
+
+.name-form {
+    right: 20vw;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(4, 10vw);
+    align-items: center;
+}
+.name-form h2 {
+    grid-column-start: 2;
+    font-size: 1.3vw;
+    color: #FFFFFF;
+}
+.name-form .name-type-space{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-top: 0.5vw;
+    min-width: 20vw;
+    max-width: 20vw;
+    min-height: 1vw;
+    max-height: 1vw;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    margin-left: 1vw;
+    margin-bottom: 0.5vw;
+    border-radius: 1vw;
+    border: 0.15vw solid #292626;
+}
+.comment-form {
+    display: grid;
+    grid-template-columns: repeat(2, 25vw);
+    justify-items: center;
+    align-items: center;
+}
+.comment-form h2 {
+    grid-column-start: 1;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 2vw;
+    margin-right: 1vw;
+    font-size: 1.3vw;
+    color: #FFFFFF;
+}
+.comment-form .comment-type-space {
+    position: relative;
+    top: 0vw;
+    grid-column-start: 2;
+    min-width: 20vw;
+    max-width: 20vw;
+    min-height: 10vw;
+    max-height: 10vw;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    border-radius: 1vw;
+    border: 0.15vw solid #292626;
+}
+.form-area button {
+    justify-items: center;
+    align-items: center;
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.comment-form button:hover {
+    background-color: #45a049;
+}
+.comments {
+    display: grid;
+    margin-left: 3vw;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(3, auto);
+    gap: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    text-align: left;
+}
+.comment {
+    display: in;
+    height: auto;
+    width: 20vw;
+    padding: 0vw 0.5vw 0.5vw 0.5vw;
+    border: 0.1vw solid #ddd;
+    margin-bottom: 0.25vw;
+    border-radius: 0.25vw;
+    background-color: #f9f9f9;
+    justify-items: start;
+}
+
+.comment .text {
+    display: grid;
+    grid-template-columns: 20vw;
+    grid-template-rows: auto, auto, 2vw;
+    top: 41%;
+    left: 45%;
+    background-color: transparent;
+    width: 18vw;
+    padding: 0vw 0vw 0vw 0vw;
+    margin: 0vw;
+}
+
+.comment .p-name {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 0.7vw;
+    font-weight: bold;
+    padding: 0vw 0vw 0vw 0vw;
+}
+
+.comment .p-comment {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 0.7vw;
+    padding: 0vw;
+}
+
+.comment i {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    font-size: 0.5vw;
+    color: #333;
+    padding: 0vw 0vw 0.25vw 0vw;
+}
+
+.contact-container {
+    position: absolute;
+    top: 5vw;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    gap: 1vw;
+    justify-items: center;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    border-radius: 2vw;
+    border: 0.25vw solid #007BFF;
+    width: 30vw;
+    height: fit-content;
+    padding: 0.75vw;
+}
+
+.contact h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1vw;
+    padding-right: 0.5vw;
+    top: -0.5vw;
+    margin: 0vw;
+}
+
+.contact .rectangle {
+    position: relative;
+    left: 0vw;
+    background-color: #007BFF;
+    justify-content: center;
+    width: 100%;
+    height: 0.25vw;
+}
+
+.contact a {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1vw;
+    position: relative;
+    top: 0.5vw;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+}
+
+.contact p {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-decoration: none;
+}
+
+.contact p:hover {
+    text-decoration: underline;
+}
+
+.contact img {
+    display: inline-block;
+    position: relative;
+    padding-top: 1vw;
+    padding-left: 0.25vw;
+    margin: 0vw;
+    width: auto;
+    height: 3vw;
+}
+
+.contact .map-container {
+    position: relative;
+    top: 0.5vw;
+    left: 4.5vw;
+    width: 20vw;
+    height: 20vw;
+    padding-bottom: 2vw;
+    padding-top: 1vw;
+}
+
+.contact .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    border: 0.25vw solid #007BFF;
+}
+
+.results-container {
+    position: absolute;
+    top: 6vw;
+    left: 6.5vw;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 20vw);
+    padding-top: 2vw;
+    gap: 2vw;
+    justify-items: center;
+}
+
+.result {
+    height: fit-content;
+    width: fit-content;
+    padding: 1vw;
+    border-radius: 2vw;
+    background-color: #c6c924;
+}
+
+.result p {
+    width: fit-content;
+    font-size: 1vw;
+    text-align: center;
+    margin: 0vw;
+}
+
+.result img {
+    margin-top: 1vw;
+    padding: 0vw;
+    margin: 0vw;
+    border-radius: 2vw;
+    border: 0.25vw solid #666;
+}
