@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa de Assistência Alimentar e Nutricional Emergencial</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-    <script src="js/indexControl.js"></script>
+    <script src="js/navbarControl.js"></script>
     <style>
         body::before {
+            width: 100%;
+            height: 100%;
             background-image: url('img/sunlight-landscape-grass-sky-plants-field-844946-wallhere.com.jpg');
         }
     </style>
@@ -24,9 +25,9 @@
                 <div class="title-triangle"></div>
                 <div class="title-rectangle title-rectangle2">
                     <div class="logo-container">
-                        <img src="img/Farmer Logo.png" style="width: 3.8vw; height: 4vw;">
-                        <img src="img/Chef logo.png" style="width: 3.2vw; height: 4vw;">
-                        <img src="img/Vegetables logo.png" style="width: 4vw; height: 4vw;">
+                        <img class="farmer-logo" src="img/Farmer Logo.png">
+                        <img class="chef-logo" src="img/Chef logo.png">
+                        <img class="vegetables-logo" src="img/Vegetables logo.png">
                     </div>
                 </div>  
             </div>
@@ -49,9 +50,8 @@
                         <h2>O que é?</h2>
                         <p>O PAAN é o Programa de Assistência Alimentar e Nutricional Emergencial, 
                                 do Município de Belo Horizonte, instituído pela Lei nº 11.193/2019, com o objetivo de garantir provisão alimentar às famílias em situação de insegurança alimentar encaminhadas pelos serviços socioassistenciais.</p>
-                    <img src="img/pessoa-ajuda.jpg" style="width: 40%; height: 40%;">
+                    <img src="img/pessoa-ajuda.jpg">
                     </div>
-
                     <div class="text">
                         <h2>Como funciona?</h2>
                         <p>O programa é realizado de forma integrada entre as políticas de segurança alimentar e nutricional e de assistência social, e possui as seguintes ações:</p>
@@ -63,13 +63,24 @@
                         <p>A participação da família no PAAN ocorre no período de seis meses,
                                 e poderá ser prorrogada por mais seis meses, mediante análise das equipes de referência dos serviços do Sistema Único de Assistência Social (SUAS) e
                                 da equipe da Subsecretaria de Segurança Alimentar e Nutricional (SUSAN). Quando for o caso, a família será orientada pelos serviços socioassistenciais para os procedimentos de prorrogação.</p>
-                    
+                    </div>
+                    <div class="text">
+                        <h2>Como participar do programa?</h2>
+                        <p>A inserção no PAAN ocorrerá mediante avaliação e encaminhamento das famílias atendidas ou acompanhadas pelas equipes técnicas dos serviços socioassistenciais, de acordo com os seguintes critérios:</p>
+                        <ul>
+                            <li>residirem no Município de Belo Horizonte;</li>
+                            <li>estarem inscritas no Cadastro Único para Programas Sociais – CadÚnico – e com o cadastro atualizado;</li>
+                            <li>terem configuradas a situação de extrema pobreza, nos termos do Decreto Federal nº 5.209/2004;</li>
+                            <li>não serem beneficiárias de refeições gratuitas nos restaurantes e refeitórios populares;</li>
+                            <li>estarem inseridas em atendimento ou acompanhamento socioassistencial.</li>
+                        </ul>
+                        <p>Obs.: Para além desses critérios, nas avaliações técnicas também serão observadas algumas situações prioritárias previstas nas normativas do PAAN.</p>
                     </div>
                     <div class="text">
                         <h2>Quem pode participar das oficinas e cursos de formação?</h2>
                         <p>Qualquer membro da família incluída no PAAN poderá participar das oficinas de educação alimentar e das atividades de cultivo de alimentos, como as hortas comunitárias.
                                 No caso dos cursos de formação e qualificação profissional na área de gastronomia, apenas pessoas acima de 16 anos.</p>
-                        <img src="img/pessoas-cozinhando.jpg" style="width: 40%; height: 40%;">
+                        <img src="img/pessoas-cozinhando.jpg">
                     </div>
 
                     <div class="text">
@@ -88,7 +99,7 @@
                                 
                                 Para implantação das Unidades Produtivas, as famílias devem procurar os serviços de Assistência Social (CRAS, CREAS, etc.), ou a SUSAN e Organização Inasec.
                         </p>
-                        <img src="img/pessoas-plantando.avif" style="width: 40%; height: 40%;">
+                        <img src="img/pessoas-plantando.avif">
                     </div>
                 </div>
             </div>
