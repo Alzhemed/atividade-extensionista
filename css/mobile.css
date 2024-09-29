@@ -19,8 +19,8 @@ body::before {
     top: 0vw;
     left: 0.28vw;
     border-right: 8vw solid #216119;
-    border-bottom: 5.89vw solid transparent;
-    border-top: 5.89vw solid transparent;
+    border-bottom: 5.80vw solid transparent;
+    border-top: 5.80vw solid transparent;
 }
 .logo-container {
     position: absolute;
