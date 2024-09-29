@@ -45,6 +45,7 @@ header {
     border-top: 2.9vw solid transparent;
     background: linear-gradient(to right, #3E8818, #216119);
 }
+/* Container das logos e configurações das imagens */
 .logo-container {
     display: flex;
     justify-content: end;
@@ -62,6 +63,7 @@ header {
 .logo-container .vegetables-logo {
     width: 4vw;
 }
+/* Configurações do corpo da imagem e do plano de fundo no pseudo elemento */
 body {
     width: 100vw;
     font-family: "Inria Sans";
@@ -79,10 +81,14 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vw;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     filter: blur(0.25vw);
     z-index: -1;
+}
+
+h1 {
+    text-align: center;
 }
 .btn {
     width: 12.5%;
@@ -121,17 +127,6 @@ body::before {
     background-color: #D4EF31;
     cursor: pointer;
 }
-.image-container {
-    position: relative;
-    width: 100vw;
-    top: 0vw;
-    text-align: center;
-}
-.image-container img {
-    width: 100vw;
-    height: auto;
-    margin-top: 0.25vw;
-}
 
 .image-container .title-rectangle {
     margin-top: 1vw;
@@ -153,7 +148,7 @@ body::before {
 }
 
 .text-container {
-    position: absolute;
+    position: relative;
     top: 0vw;
     left: 0vw;
     width: 98vw;
@@ -169,6 +164,7 @@ body::before {
 }
 
 .text {
+    position: relative;
     width: 45vw;
     height: fit-content;
     background-color: rgb(255, 255, 255);
@@ -185,14 +181,14 @@ body::before {
     border: 0.20vw solid #007BFF;
 }
 
-.image-container .text-container .text h2 {
+.text h2 {
     font-size: 1.8vw;
     color: #333;
     border-bottom: 0.25vw solid #007BFF;
     padding-bottom: 0.25vw;
     margin-top: 0.25vw;
 }
-p {
+.text p {
     font-size: 1vw;
     margin: 0.5vw 0;
     text-align: justify;
@@ -214,9 +210,9 @@ p {
 
 /* Estilo do container de cards */
 .card-container {
-    position: absolute;
-    top: 13vw;
-    width: 100vw;
+    position: relative;
+    top: 2.5vw;
+    width: 98vw;
     display: flex;
     flex-wrap: wrap;
     gap: 2vw;
@@ -230,7 +226,7 @@ p {
     border-radius: 1vw;
     box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
     width: 17vw;
-    height: 30vw;
+    height: 31vw;
     padding: 1.5vw;
     text-align: center;
     position: relative;
@@ -243,29 +239,20 @@ p {
 }
 
 .card h3 {
-    position: absolute;
-    top: 15vw;
-    width: 17vw;
-    margin: 0 0 0.5vw;
+    margin: 0 0 0 0.5vw;
     font-size: 1.3vw;
     color: #333;
 }
 
 .card p {
-    position: absolute;
-    top: 17vw;
     margin: 0;
-    width: 17vw;
     color: #666;
     font-size: 0.9vw;
     line-height: 1.5;
 }
 
 .card a {
-    position: absolute;
     display: inline-block;
-    top: 29vw;
-    left: 6.7vw;
     font-size: 1vw;
     width: 5vw;
     height: 1.5vw;
@@ -283,7 +270,7 @@ p {
 }
 
 .comment-section {
-    position: absolute;
+    position: relative;
     top: 0vw;
     margin-top: 1vw;
     width: 100vw;
@@ -313,7 +300,6 @@ p {
 }
 .name-form .name-type-space{
     grid-column-start: 3;
-    grid-column-end: 4;
     margin-top: 0.5vw;
     min-width: 20vw;
     max-width: 20vw;
@@ -361,7 +347,6 @@ p {
     top: 17vw;
     left: 21vw;
     justify-items: center;
-    align-items: center;
     padding: 0.5vw 1vw;
     font-size: 1vw;
     background-color: #4CAF50;
@@ -374,6 +359,7 @@ p {
 }
 .comments {
     display: grid;
+    margin-right: 3vw;
     margin-left: 3vw;
     grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(3, auto);
@@ -385,7 +371,7 @@ p {
 }
 .comment {
     display: inline-block;
-    height: auto;
+    height: fit-content;
     width: 20vw;
     padding: 0vw 0.5vw 0.5vw 0.5vw;
     border: 0.1vw solid #ddd;
@@ -398,9 +384,9 @@ p {
 .comment .text {
     display: grid;
     grid-template-columns: 20vw;
-    grid-template-rows: auto, auto, 2vw;
-    top: 41%;
-    left: 45%;
+    grid-template-rows: repeat(3, auto);
+    top: 0vw;
+    left: 0vw;
     background-color: transparent;
     width: 18vw;
     padding: 0vw 0vw 0vw 0vw;
@@ -411,8 +397,8 @@ p {
     grid-row-start: 1;
     grid-row-end: 1;
     word-wrap: break-word;
-    max-width: 100%;
-    font-size: 0.7vw;
+    max-width: fit-content;
+    font-size: 1vw;
     font-weight: bold;
     padding: 0vw 0vw 0vw 0vw;
 }
@@ -421,30 +407,38 @@ p {
     grid-row-start: 2;
     grid-row-end: 2;
     word-wrap: break-word;
-    max-width: 100%;
-    font-size: 0.7vw;
+    max-width: fit-content;
+    font-size: 1vw;
     padding: 0vw;
 }
 
 .comment i {
-    grid-row-start: 3;
-    grid-row-end: 3;
-    font-size: 0.5vw;
+    font-size: 0.75vw;
     color: #333;
     padding: 0vw 0vw 0.25vw 0vw;
 }
 
+.title-message {
+    color: #191a19; 
+    font-size: 1.8vw;
+    text-decoration: underline;
+}
+
 .contact-container {
-    position: absolute;
-    top: 15vw;
+    position: relative;
+    top: 0vw;
     display: flex;
     flex-wrap: wrap;
     margin-top: 2vw;
     margin-left: 1vw;
     margin-right: 1vw;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     gap: 1vw;
     justify-items: center;
+}
+
+.blank-space {
+    height: 3vw;
 }
 
 .contact {
@@ -460,17 +454,29 @@ p {
 
 .contact h2 {
     font-size: 1.5vw;
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding-bottom: 1vw;
     padding-right: 0.5vw;
-    top: 1.7vw;
+    bottom: 0.65vw;
     margin: 0vw;
 }
 
+.contact .address-title {
+    left: 10.5vw;
+}
+
+.contact .phone-title {
+    left: 8vw;
+}
+
+.contact .email-title {
+    left: 11.5vw;
+}
+
 .contact .rectangle {
-    position: absolute;
-    top: 5vw;
+    position: relative;
+    bottom: 0.75vw;
     background-color: #007BFF;
     justify-content: center;
     padding: 0vw;
@@ -486,8 +492,12 @@ p {
     width: fit-content;
     height: fit-content;
     font-size: 1vw;
-    position: absolute;
+    position: relative;
     text-decoration: none;
+}
+
+.contact .email-link {
+    left: 10.3vw;
 }
 
 .contact a:hover{
@@ -495,9 +505,9 @@ p {
 }
 
 .contact .phone-number-container {
-    position: absolute;
-    left: 10vw;
-    top: 6.5vw;
+    position: relative;
+    left: 0vw;
+    top: 0vw;
     display: flex;
     gap: 0.5vw;
     flex-direction: column;
@@ -520,8 +530,8 @@ p {
 
 .contact img {
     display: inline-block;
-    position: absolute;
-    top: -0.25vw;
+    position: relative;
+    top: 0vw;
     padding-top: 1vw;
     padding-left: 0.25vw;
     margin: 0vw;
@@ -529,8 +539,23 @@ p {
     height: 3vw;
 }
 
+.contact .address-img {
+    left: 10vw;
+}
+
+.contact .phone-img {
+    left: 6vw;
+    top: 0.25vw;
+}
+
+.contact .email-img {
+    left: 11vw;
+    top: 0.3vw;
+}
+
 .contact .map-container {
-    position: absolute;
+    position: relative;
+    left: 4.5vw;
     width: 20vw;
     height: 20vw;
     padding-bottom: 2vw;
@@ -544,9 +569,17 @@ p {
     border: 0.25vw solid #007BFF;
 }
 
+.result-title {
+    font-size: 2.5vw;
+    color: #161515; 
+    text-align: center; 
+    margin: 2vw 0vw 0vw 0vw; 
+    text-decoration: underline;
+}
+
 .results-container {
-    position: absolute;
-    top: 6vw;
+    position: relative;
+    top: 0vw;
     left: 1vw;
     width: 98vw;
     height: 50vw;
@@ -556,6 +589,13 @@ p {
     gap: 2vw;
     justify-items: center;
     margin-bottom: 2vw;
+}
+
+.results-container h2 {
+    position: relative;
+    color: #191a19; 
+    font-size: 1.8vw;
+    top: 7.5vw;
 }
 
 .result {
@@ -568,10 +608,8 @@ p {
 }
 
 .result p {
-    position: absolute;
-    top: 17vw;
-    left: 1.8vw;
-    width: 14vw;
+    color: #161515;
+    position: relative;
     font-size: 1vw;
     text-align: center;
     margin: 0vw;
@@ -580,9 +618,8 @@ p {
 .result img {
     width: 15vw;
     height: 15vw;
-    margin-top: 1vw;
     padding: 0vw;
-    margin: 0vw;
+    margin: 1vw 0vw 0vw 0.3vw;
     border-radius: 2vw;
-    border: 0.25vw solid #666;
+    border: 0.25vw solid #161515;
 }
